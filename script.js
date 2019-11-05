@@ -14,7 +14,8 @@ for (let i = 0; i < lifeEvents.length; i++) {
 
 let randomNumber;
 let counter = 0;
-while (randomNumber !== 5) {
+
+while (true) {
     randomNumber = parseInt(Math.ceil(Math.random() * 10));
     if (randomNumber !== 5 ) {
         console.log(`${randomNumber} !== 5`)
@@ -22,5 +23,6 @@ while (randomNumber !== 5) {
     } else {
         counter++;
         (counter === 1) ? console.log(`5 === 5, it took ${counter} iteration to randomly generate the number 5.`) : console.log(`5 === 5, it took ${counter} iterations to randomly generate the number 5.`);
+        break;
     }
 };
