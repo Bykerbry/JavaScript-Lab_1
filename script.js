@@ -16,13 +16,20 @@ let randomNumber;
 let counter = 0;
 
 while (true) {
-    randomNumber = parseInt(Math.ceil(Math.random() * 10));
+    randomNumber = getRandomInt(1, 10);
     if (randomNumber !== 5 ) {
-        console.log(`${randomNumber} !== 5`)
+        console.log(`${randomNumber} !== 5`);
         counter++;
     } else {
         counter++;
         (counter === 1) ? console.log(`5 === 5, it took ${counter} iteration to randomly generate the number 5.`) : console.log(`5 === 5, it took ${counter} iterations to randomly generate the number 5.`);
         break;
     }
+};
+
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 };
